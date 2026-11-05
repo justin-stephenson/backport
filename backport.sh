@@ -128,7 +128,7 @@ for commit in $MERGE_COMMITS_SHA; do
 
 
         # Make sure to disable the interactive editor
-        GIT_EDITOR=/usr/bin/true git cherry-pick --continue
+        GIT_EDITOR=/usr/bin/true git cherry-pick --continue --allow-empty
     fi
     CONFLICT_INFORMATION=`echo -e "$CONFLICT_INFORMATION"`
 done
