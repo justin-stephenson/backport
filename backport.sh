@@ -157,6 +157,7 @@ pr_create_args+=`echo $PR_REVIEWERS | tr ' ' '\n' | xargs -I{} echo -n "--review
 if [ "$has_conflict" -eq 1 ]; then
     pr_create_args+="--draft "
 fi
+pr_create_args+="--label no-backport"
 
 gh pr create $pr_create_args \
     --base "$TARGET" \
